@@ -7,19 +7,24 @@
 
 using namespace std;
 int main(){
-    double average;
-    double sum = 0;
-    int count = 0;
-    auto *donations = new array<double,10 >;
+    double donations[10] {};
+    int index;
+    int count=0;
+    double average = 0;
+    for(index=0;index<10;index++){
+        cin>>donations[index];
+        if(cin.fail())//输入错误则退出
+            break;
+        average+=donations[index];
+    }
+    average/=index;
     for(int i=0;i<10;i++){
-        cin>>donations->at(i);
-    }
-    for(count=0;count<10;count++){
-        cout<<donations->at(count)<<endl;
+        if(donations[i]>average)
+            count++;
     }
 
-
-
+    cout<<"The average is "<<average<<endl;
+    cout<<"There are "<<count<<" donations larger than the average";
     return 0;
 }
 
