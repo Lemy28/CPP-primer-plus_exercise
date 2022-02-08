@@ -4,4 +4,4 @@ project(CPP_primer_plus_exercise)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(CPP_primer_plus_exercise
-        6.9.1.cpp)
+        6.11.2.cpp)
